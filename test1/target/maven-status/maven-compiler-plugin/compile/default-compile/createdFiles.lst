@@ -1,0 +1,12 @@
+com\mycompany\test1\entity\Positions_.class
+com\mycompany\test1\entity\Employees.class
+com\mycompany\test1\entity\Departments.class
+com\mycompany\test1\entity\Departments_.class
+com\mycompany\test1\entity\Employees_.class
+com\mycompany\test1\entity\Positions.class
+com\mycompany\test1\controller\commentController.class
+com\mycompany\test1\entity\Comment_.class
+com\mycompany\test1\entity\Document_.class
+com\mycompany\test1\Test1.class
+com\mycompany\test1\entity\Document.class
+com\mycompany\test1\entity\Comment.class

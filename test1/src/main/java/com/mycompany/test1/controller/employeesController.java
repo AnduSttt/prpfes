@@ -6,7 +6,9 @@ package com.mycompany.test1.controller;
 
 import com.mycompany.test1.entity.Employees;
 import com.mycompany.test1.entity.Uvoleni;
+import com.mycompany.test1.repository.absentsRepository;
 import com.mycompany.test1.repository.departmentsRepository;
+import com.mycompany.test1.repository.educationsRepository;
 import com.mycompany.test1.repository.employeesRepository;
 import com.mycompany.test1.repository.positionsRepository;
 import com.mycompany.test1.repository.uvolenRepository;
@@ -212,9 +214,35 @@ public class employeesController {
             @RequestParam("idUser") String idUser) {
         if (vacationRepository.vacationsEmpl(employeesRepository.findById(Integer.valueOf(idUser)).get()) == null) {
             return new ResponseEntity(HttpStatus.NOT_FOUND);
-        }else{
+        } else {
             return ResponseEntity.ok(vacationRepository.vacationsEmpl(employeesRepository.findById(Integer.valueOf(idUser)).get()));
         }
     }
 
+    @Autowired
+    private absentsRepository absentsRepository;
+
+    @GetMapping("/GetAbsentsEmployees")
+    public ResponseEntity GetAbsrntsEmployees(
+            @RequestParam("idUser") String idUser) {
+        if (absentsRepository.absentsEmpl(employeesRepository.findById(Integer.valueOf(idUser)).get()) == null) {
+            return new ResponseEntity(HttpStatus.NOT_FOUND);
+        } else {
+            return ResponseEntity.ok(absentsRepository.absentsEmpl(employeesRepository.findById(Integer.valueOf(idUser)).get()));
+        }
+    }
+
+    @Autowired
+    private educationsRepository educationsRepository;
+
+    @GetMapping("/GetEducationsEmployees")
+    public ResponseEntity GetEducationsEmployees(
+            @RequestParam("idUser") String idUser) {
+        Employees empl = (employeesRepository.findById(Integer.valueOf(idUser))).get();
+        if (educationsRepository.educationsEmpl(empl.getEmployeeID()) == null) {
+            return new ResponseEntity(HttpStatus.NOT_FOUND);
+        } else {
+            return ResponseEntity.ok(educationsRepository.educationsEmpl(empl.getEmployeeID()));
+        }
+    }
 }

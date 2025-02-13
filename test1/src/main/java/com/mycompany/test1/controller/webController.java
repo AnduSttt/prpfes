@@ -33,9 +33,7 @@ public class webController {
             @RequestParam("password") String password, Model model) {
         Employees emp1 = employeesRepository.findLoginAndPassword(login, password);
         if (emp1 != null) {
-            ModelAndView enter = new ModelAndView("hello");
-            enter.addObject("message", emp1.getName());
-            return enter;
+            return new ModelAndView("hello");
         } else {
             return new ModelAndView("document");
         }

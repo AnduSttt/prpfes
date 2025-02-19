@@ -1,8 +1,104 @@
-.scroll{
-    overflow-x: auto;
+*{
+    padding: 0px;
+    margin: 0;
+}
+
+body{
+    font-family: sans-serif;
 }
 
 header{
     height: 100px;
-    
+    background-color: chartreuse;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+h3{
+    margin-bottom:10px;
+    margin-top:10px;
+}
+
+.icon{
+    border-radius: 100px;
+    background-color: beige;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    background-image:url(https://avatars.mds.yandex.net/get-entity_search/114969/935545603/S600xU_2x);
+}
+
+input{
+    margin-left: 20px;
+    width: 1000px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.scrollX{
+    overflow-x: auto;
+    border: 5px;
+    white-space: nowrap;
+}
+
+.EmployeeCard{
+    background-color: limegreen;
+    height: 150px;
+    padding: 15px;
+    display: inline-block;
+    margin-right: 8px;
+    min-width: 400px;
+}
+
+main{
+    padding-left: 40px;
+    padding-right:40px;
+    padding-top: 40px;
+
+}
+
+.email{
+    text-decoration:underline;
+}
+
+p{
+    margin-top: 5px;
+}
+
+.calendar{
+    border: 1px solid #ddd;
+    width: 250px;
+    margin-bottom: 10px;
+    padding-bottom: 18px;
+}
+
+.CalendarHeader button{
+    width: 10px;
+    border: none;
+    background: none;
+    margin: 5px;
+}
+
+.calendarBody{
+    padding-left: 10px;
+}
+
+.CalendarHeader{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    background-color: greenyellow;
+    margin-bottom: 10px;
+}
+
+.calendarGrid{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.red {
+    color: red;
 }

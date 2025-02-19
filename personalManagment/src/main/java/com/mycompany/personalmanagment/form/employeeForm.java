@@ -203,6 +203,7 @@ public class employeeForm extends javax.swing.JFrame {
         String corporateEmail = jFormattedTextField5.getText();
         String password = "123";
         String login = "123";
+        
 
         FormBody formBody = new FormBody.Builder()
                 .add("name", name)
@@ -261,7 +262,6 @@ public class employeeForm extends javax.swing.JFrame {
                 JSONObject jo = ja.getJSONObject(i);
 
                 Object[] obj = {jo.getString("dateStart"), jo.getString("dateEnd"), "Отпуск"};
-                System.err.println(obj);
                 tm.addRow(obj);
             }
             jTable1.setModel(tm);
@@ -284,7 +284,6 @@ public class employeeForm extends javax.swing.JFrame {
                 JSONObject jo = ja.getJSONObject(i);
 
                 Object[] obj = {jo.getString("dateStart"), jo.getString("dateEnd"), "Обучение"};
-                System.err.println(obj);
                 tm.addRow(obj);
             }
             jTable1.setModel(tm);
@@ -300,14 +299,13 @@ public class employeeForm extends javax.swing.JFrame {
                 .get()
                 .build();
 
-        DefaultTableModel tm = (DefaultTableModel) jTable1.getModel();
+        DefaultTableModel tm =  (DefaultTableModel) jTable1.getModel();
         try (Response res = ok.newCall(req).execute()) {
             JSONArray ja = new JSONArray(res.body().string());
             for (int i = 0; i < ja.length(); i++) {
                 JSONObject jo = ja.getJSONObject(i);
 
                 Object[] obj = {jo.getString("dateStart"), jo.getString("dateEnd"), "Отсутсвия"};
-                System.err.println(obj);
                 tm.addRow(obj);
             }
             jTable1.setModel(tm);

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="com.mycompany_TestApi2_jar_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.mycompany.testapi2.entity.Klassificationsobuchenya</class>
+    <class>com.mycompany.testapi2.entity.Materalsobuchenya</class>
+    <class>com.mycompany.testapi2.entity.Kamandirovki</class>
+    <class>com.mycompany.testapi2.entity.Commentaries</class>
+    <class>com.mycompany.testapi2.entity.Padrazdeleniya</class>
+    <class>com.mycompany.testapi2.entity.Souskateli</class>
+    <class>com.mycompany.testapi2.entity.Tipimeropriyatya</class>
+    <class>com.mycompany.testapi2.entity.Dolshnosti</class>
+    <class>com.mycompany.testapi2.entity.Otsutstiya</class>
+    <class>com.mycompany.testapi2.entity.Meropriyatiya</class>
+    <class>com.mycompany.testapi2.entity.Oblastimaterials</class>
+    <class>com.mycompany.testapi2.entity.Documents</class>
+    <class>com.mycompany.testapi2.entity.Obuchenyesotrudnikov</class>
+    <class>com.mycompany.testapi2.entity.Tipesmaterials</class>
+    <class>com.mycompany.testapi2.entity.Obicheniya</class>
+    <class>com.mycompany.testapi2.entity.Otguli</class>
+    <class>com.mycompany.testapi2.entity.Rabotniki</class>
+    <class>com.mycompany.testapi2.entity.Otpuski</class>
+    <class>com.mycompany.testapi2.entity.Statusesmeropriyatya</class>
+    <class>com.mycompany.testapi2.entity.Statusesmaterials</class>
+    <class>com.mycompany.testapi2.entity.Materials</class>
+    <class>com.mycompany.testapi2.entity.Padrazdeleniya_1</class>
+    <class>com.mycompany.testapi2.entity.Dolshnosti_1</class>
+    <class>com.mycompany.testapi2.entity.Documents_1</class>
+    <class>com.mycompany.testapi2.entity.Rabotniki_1</class>
+    <class>com.mycompany.testapi2.entity.Sotrudniki</class>
+    <class>com.mycompany.testapi2.entity.Workingcalendar</class>
+    <class>com.mycompany.testapi2.entity.Sotrudnikworkingcalendar</class>
+    <properties>
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://SRV-1208-1:3306/kalugin?serverTimezone=Asia/Novokuznetsk&amp;useSLL=false"/>
+      <property name="jakarta.persistence.jdbc.user" value="kalugin"/>
+      <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="jakarta.persistence.jdbc.password" value="kalugin"/>
+    </properties>
+  </persistence-unit>
+</persistence>

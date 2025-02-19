@@ -188,6 +188,7 @@ public class mainForm extends javax.swing.JFrame {
                     int panelIndex = jo.getInt("employeeID"); // Захватываем значение i для использования в ActionListener
 
                     nestedPanel.addMouseListener(new MouseAdapter() {
+
                         @Override
                         public void mouseClicked(MouseEvent e) {
                             openInformationForm(panelIndex);// Действие при клике на панель

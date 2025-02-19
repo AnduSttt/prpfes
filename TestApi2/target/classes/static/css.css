@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.logo{
+    border-radius: 100px;
+    width: 60px;
+    height:  60px;
+    background: aqua;
+    background-image: url(\src\main\resources\static\img\slider_1500x630_b.jpg);
+    background-color: aquamarine;
+}
+
+header{
+    display: flex;
+
+}
+
+.CalendarGrid{
+    grid-template-columns: repeat(7,1fr);
+    gap: 5px;
+    display: grid;
+}
+
+.Calendar{
+    width: 400px;
+}
+.CalendarHeader{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.employee{
+    display: inline-block;
+    padding-left: 50px;
+}
+
+.scrolX{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.mainDiv{
+    display: flex;
+}
+.ScrolY{
+    overflow-y: auto;
+    height: 200px;
+}
+.eventC{
+    background-color: beige;
+    padding: 10px;
+    margin: 10px;
+    width: 400px;
+}
+.newsCard{
+    margin: 15px;
+    background: blanchedalmond;
+    width: 690px;
+    height: 400px;
+}
+.news{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.img{
+    background-image: url("./img/slider_1500x630_b.jpg");
+    height: 280px;
+    background-size: cover;
+}

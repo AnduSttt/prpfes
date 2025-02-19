@@ -17,7 +17,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 @RequestMapping("/web")
-@SessionAttributes("UserId")
 public class webController {
 
     @Autowired
@@ -30,7 +29,7 @@ public class webController {
 
     @GetMapping("/signIn")
     public ModelAndView SignIn(@RequestParam("login") String login,
-            @RequestParam("password") String password, Model model) {
+            @RequestParam("password") String password) {
         Employees emp1 = employeesRepository.findLoginAndPassword(login, password);
         if (emp1 != null) {
             return new ModelAndView("hello");
